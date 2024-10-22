@@ -35,38 +35,46 @@ This is my portfolio website
 
 # Objective 
 
-- What is the key pain point? 
+- What is the key challenge? 
 
-The Head of Marketing wants to find out who the top YouTubers in Canada are in 2024 to decide on which YouTubers would be best to run marketing campaigns throughout the rest of the year.
+The Head of Marketing is looking to identify the top-performing YouTubers in Canada for 2024 to optimize influencer marketing campaigns for the remainder of the year. The goal is to pinpoint creators who align with brand values and reach the right audience for maximum impact.
 
 - What is the ideal solution? 
 
-To create a dashboard that provides insights into the top UK YouTubers in 2024 that includes their 
-- subscriber count
-- total views
-- total videos, and
-- engagement metrics
+Build an interactive dashboard that highlights the top Canadian YouTubers in 2024, offering data-driven insights such as:
 
-This will help the marketing team make informed decisions about which YouTubers to collaborate with for their marketing campaigns.
+Subscriber count
+Total views
+Number of videos
+Engagement metrics (e.g., likes, comments, shares)
 
-## User story 
-
-As the Head of Marketing, I want to use a dashboard that analyses YouTube channel data in the UK . 
-
-This dashboard should allow me to identify the top performing channels based on metrics like subscriber base and average views. 
-
-With this information, I can make more informed decisions about which Youtubers are right to collaborate with, and therefore maximize how effective each marketing campaign is.
+This dashboard will help the marketing team quickly assess which YouTubers are the best fit for collaboration, ensuring informed and impactful marketing decisions throughout the year.
 
 
-# Data source 
 
-- What data is needed to achieve our objective?
+## User Story
 
-We need data on the top UK YouTubers in 2024 that includes their 
-- channel names
-- total subscribers
-- total views
-- total videos uploaded
+As the Head of Marketing, I want to use a dashboard that analyzes YouTube channel data in Canada. 
+
+This dashboard should enable me to identify the top-performing channels based on metrics such as subscriber base, total views, and engagement rates. 
+
+With this information, I can make informed decisions about which YouTubers are best to collaborate with, ensuring each marketing campaign is highly effective.
+
+---
+
+## Data Source
+
+### What data is needed to achieve our objective?
+
+We need comprehensive data on the top Canadian YouTubers in 2024, including:
+- Channel names
+- Total subscribers
+- Total views
+- Total videos uploaded
+- Engagement metrics (e.g., likes, comments, shares)
+
+This data will support identifying channels with strong audience engagement and growth potential for marketing collaborations.
+
 
 
 - Where is the data coming from? 
@@ -124,31 +132,61 @@ Some of the data visuals that may be appropriate in answering our questions incl
 
 
 # Development
+
 ## Pseudocode
 
-- What's the general approach in creating this solution from start to finish?
+### General Approach to Creating the Solution:
+1. **Obtain the Data:**
+   - Collect the data on top Canadian YouTubers for 2024, including their subscriber count, total views, and engagement metrics.
 
-1. Get the data
-2. Explore the data in Excel
-3. Load the data into SQL Server
-4. Clean the data with SQL
-5. Test the data with SQL
-6. Visualize the data in Power BI
-7. Generate the findings based on the insights
-8. Write the documentation + commentary
-9. Publish the data to GitHub Pages
+2. **Data Exploration (in Excel):**
+   - Open the dataset in Excel to inspect and explore.
+   - Identify missing values, outliers, or potential errors.
+   - Note the columns of interest for analysis.
 
-## Data exploration notes
+3. **Load the Data into SQL Server:**
+   - Create a database and load the cleaned data from Excel into SQL Server for further processing.
 
-This is the stage where you have a scan of what's in the data, errors, inconcsistencies, bugs, weird and corrupted characters etc  
+4. **Data Cleaning (SQL):**
+   - Remove unnecessary columns.
+   - Handle missing or inconsistent data.
+   - Standardize formats (e.g., ensure subscriber counts and views are numeric).
+   
+5. **Data Validation (SQL):**
+   - Verify that the cleaned data is accurate and complete.
+   - Run queries to check the integrity of the data (e.g., no nulls in important columns like subscriber count).
+   
+6. **Data Visualization (Power BI):**
+   - Import the cleaned data from SQL Server into Power BI.
+   - Create visualizations for key metrics like subscriber growth, video count, and engagement rates.
+   
+7. **Generate Insights:**
+   - Use the Power BI dashboard to analyze trends and identify the top Canadian YouTubers based on engagement, views, and subscribers.
+
+8. **Document the Process and Findings:**
+   - Write a detailed report explaining the data exploration, cleaning, analysis, and insights generated from the dashboard.
+   
+9. **Publish the Data and Results:**
+   - Upload the project, including the Power BI dashboard and documentation, to GitHub Pages for public access.
+
+---
+
+## Data Exploration Notes
+
+### Initial Observations of the Dataset:
+1. **Relevant Data Columns:**
+   - At least 4 columns contain the critical information needed for the analysis (e.g., channel names, subscribers, views, engagement metrics), indicating no need for additional data collection.
+
+2. **Channel ID Format:**
+   - The first column seems to hold YouTube channel IDs, often separated by the `@` symbol. We need to extract the proper channel names for easier reference in our analysis.
+
+3. **Language Discrepancies:**
+   - Some headers and data are in a different language. We need to determine whether these columns are relevant. If needed, we can translate or remove them to ensure consistency.
+
+4. **Excessive Data:**
+   - There’s more data in the dataset than we need for this analysis. Non-essential columns will be removed to focus on the key metrics.
 
 
-- What are your initial observations with this dataset? What's caught your attention so far? 
-
-1. There are at least 4 columns that contain the data we need for this analysis, which signals we have everything we need from the file without needing to contact the client for any more data. 
-2. The first column contains the channel ID with what appears to be channel IDS, which are separated by a @ symbol - we need to extract the channel names from this.
-3. Some of the cells and header names are in a different language - we need to confirm if these columns are needed, and if so, we need to address them.
-4. We have more data than we need, so some of these columns would need to be removed
 
 ## Data cleaning 
 - What do we expect the clean data to look like? (What should it contain? What contraints should we apply to it?)
@@ -197,18 +235,18 @@ And here is a tabular representation of the expected schema for the clean data:
 ```sql
 /*
 # 1. Select the required columns
-# 2. Extract the channel name from the 'NOMBRE' column
+# 2. Extract the channel name from the 'NAME' column
 */
 
 -- 1.
 SELECT
-    SUBSTRING(NOMBRE, 1, CHARINDEX('@', NOMBRE) -1) AS channel_name,  -- 2.
+    SUBSTRING(NAME, 1, CHARINDEX('@', NAME) -1) AS channel_name,  -- 2.
     total_subscribers,
     total_views,
     total_videos
 
 FROM
-    top_uk_youtubers_2024
+    top_canada_youtubers_2024
 ```
 
 
@@ -221,21 +259,15 @@ FROM
 # 3. Select the required columns from the top_uk_youtubers_2024 SQL table 
 */
 
--- 1.
-CREATE VIEW view_uk_youtubers_2024 AS
+CREATE VIEW view_updated_canada AS
 
--- 2.
 SELECT
-    CAST(SUBSTRING(NOMBRE, 1, CHARINDEX('@', NOMBRE) -1) AS VARCHAR(100)) AS channel_name, -- 2. 
-    total_subscribers,
-    total_views,
-    total_videos
-
--- 3.
+	CAST(SUBSTRING(NAME, 1, CHARINDEX('@', NAME) - 1) AS VARCHAR(100)) as channel_name,
+	total_subscribers,
+	total_views,
+	total_videos
 FROM
-    top_uk_youtubers_2024
-
-```
+	updated_canada;
 
 
 # Testing 
@@ -250,10 +282,11 @@ Here are the data quality tests conducted:
 # Count the total number of records (or rows) are in the SQL view
 */
 
-SELECT
-    COUNT(*) AS no_of_rows
-FROM
-    view_uk_youtubers_2024;
+--1 . Row count check
+
+SELECT COUNT(*) as no_of_rows
+FROM view_updated_canada;
+
 
 ```
 
@@ -268,14 +301,14 @@ FROM
 # Count the total number of columns (or fields) are in the SQL view
 */
 
+--2. Column count check
 
-SELECT
-    COUNT(*) AS column_count
-FROM
-    INFORMATION_SCHEMA.COLUMNS
-WHERE
-    TABLE_NAME = 'view_uk_youtubers_2024'
-```
+SELECT 
+	COUNT(*) as column_count
+FROM 
+	INFORMATION_SCHEMA.COLUMNS
+WHERE 
+	TABLE_NAME = 'view_updated_canada';
 ### Output 
 ![Column count check](assets/images/2_column_count_check.png)
 
@@ -288,15 +321,15 @@ WHERE
 # Check the data types of each column from the view by checking the INFORMATION SCHEMA view
 */
 
--- 1.
+--3. Data type check
+
 SELECT
-    COLUMN_NAME,
-    DATA_TYPE
+	COLUMN_NAME,
+	DATA_TYPE
 FROM
-    INFORMATION_SCHEMA.COLUMNS
+	INFORMATION_SCHEMA.COLUMNS
 WHERE
-    TABLE_NAME = 'view_uk_youtubers_2024';
-```
+	TABLE_NAME = 'view_updated_canada'
 ### Output
 ![Data type check](assets/images/3_data_type_check.png)
 
@@ -310,21 +343,17 @@ WHERE
 # 3. Filter for groups with more than one row
 */
 
--- 1.
-SELECT
-    channel_name,
-    COUNT(*) AS duplicate_count
+--4. Duplicate records check
+
+SELECT channel_name,
+	COUNT(*) AS duplicate_count
 FROM
-    view_uk_youtubers_2024
-
--- 2.
+	view_updated_canada
 GROUP BY
-    channel_name
-
--- 3.
+	channel_name
 HAVING
-    COUNT(*) > 1;
-```
+	COUNT(*) > 1;
+
 ### Output
 ![Duplicate count check](assets/images/4_duplicate_records_check.png)
 
@@ -337,7 +366,7 @@ HAVING
 
 ![GIF of Power BI Dashboard](assets/images/top_uk_youtubers_2024.gif)
 
-This shows the Top UK Youtubers in 2024 so far. 
+This shows the Top Canadian Youtubers in 2024 so far. 
 
 
 ## DAX Measures
