@@ -544,34 +544,34 @@ For this analysis, we'll prioritize analysing the metrics that are important in 
 
 Campaign idea = product placement 
 
-1. NoCopyrightSounds 
-- Average views per video = 6.92 million
+a. Super Simple Songs - Kids Songs
+- Average views per video = 64.66 million
 - Product cost = $5
-- Potential units sold per video = 6.92 million x 2% conversion rate = 138,400 units sold
-- Potential revenue per video = 138,400 x $5 = $692,000
+- Potential units sold per video = 64.66 million x 2% conversion rate = 1,293,200 units sold
+- Potential revenue per video = 1,293,200 x $5 = $6,466,000
 - Campaign cost (one-time fee) = $50,000
-- **Net profit = $692,000 - $50,000 = $642,000**
+- **Net profit = $6,466,000 - $50,000 = $6,416,000**
 
-b. DanTDM
+b. Justin Bieber
 
-- Average views per video = 5.34 million
+- Average views per video = 131.06 million
 - Product cost = $5
-- Potential units sold per video = 5.34 million x 2% conversion rate = 106,800 units sold
-- Potential revenue per video = 106,800 x $5 = $534,000
+- Potential units sold per video = 131.06 million x 2% conversion rate = 2,621,200 units sold
+- Potential revenue per video = 2,621,200 x $5 = $13,106,000
 - Campaign cost (one-time fee) = $50,000
-- **Net profit = $534,000 - $50,000 = $484,000**
+- **Net profit = $13,106,000 - $50,000 = $13,056,000**
 
-c. Dan Rhodes
+c. The Weeknd
 
-- Average views per video = 11.15 million
+- Average views per video = 159.03 million
 - Product cost = $5
-- Potential units sold per video = 11.15 million x 2% conversion rate = 223,000 units sold
-- Potential revenue per video = 223,000 x $5 = $1,115,000
+- Potential units sold per video = 159.03 million x 2% conversion rate = 3,180,600 units sold
+- Potential revenue per video = 3,180,600 x $5 = $15,903,000
 - Campaign cost (one-time fee) = $50,000
-- **Net profit = $1,115,000 - $50,000 = $1,065,000**
+- **Net profit = $15,903,000 - $50,000 = $15,853,000**
 
 
-Best option from category: Dan Rhodes
+Best option from category: The Weeknd
 
 
 #### SQL query 
