@@ -269,7 +269,7 @@ SELECT
 FROM
 	updated_canada;
 
-
+```
 # Testing 
 
 - What data quality and validation checks are you going to create?
@@ -309,6 +309,7 @@ FROM
 	INFORMATION_SCHEMA.COLUMNS
 WHERE 
 	TABLE_NAME = 'view_updated_canada';
+```
 ### Output 
 ![Column count check](assets/images/2_column_count_check.png)
 
@@ -330,6 +331,7 @@ FROM
 	INFORMATION_SCHEMA.COLUMNS
 WHERE
 	TABLE_NAME = 'view_updated_canada'
+```
 ### Output
 ![Data type check](assets/images/3_data_type_check.png)
 
@@ -353,7 +355,7 @@ GROUP BY
 	channel_name
 HAVING
 	COUNT(*) > 1;
-
+```
 ### Output
 ![Duplicate count check](assets/images/4_duplicate_records_check.png)
 
@@ -375,8 +377,8 @@ This shows the Top Canadian Youtubers in 2024 so far.
 ```sql
 Total Subscribers (M) = 
 VAR million = 1000000
-VAR sumOfSubscribers = SUM(view_uk_youtubers_2024[total_subscribers])
-VAR totalSubscribers = DIVIDE(sumOfSubscribers,million)
+VAR sumOfSubscribers = SUM(view_updated_canada[total_subscribers])
+VAR totalSubscribers = DIVIDE(sumOfSubscribers, million)
 
 RETURN totalSubscribers
 
@@ -384,10 +386,10 @@ RETURN totalSubscribers
 
 ### 2. Total Views (B)
 ```sql
-Total Views (B) = 
+Total Ciews (B) = 
 VAR billion = 1000000000
-VAR sumOfTotalViews = SUM(view_uk_youtubers_2024[total_views])
-VAR totalViews = ROUND(sumOfTotalViews / billion, 2)
+VAR sumOfTotalViews = SUM(view_updated_canada[total_views])
+VAR totalViews = DIVIDE(sumOfTotalViews, billion)
 
 RETURN totalViews
 
@@ -396,7 +398,7 @@ RETURN totalViews
 ### 3. Total Videos
 ```sql
 Total Videos = 
-VAR totalVideos = SUM(view_uk_youtubers_2024[total_videos])
+VAR totalVideos = SUM(view_updated_canada[total_videos])
 
 RETURN totalVideos
 
@@ -404,13 +406,13 @@ RETURN totalVideos
 
 ### 4. Average Views Per Video (M)
 ```sql
-Average Views per Video (M) = 
-VAR sumOfTotalViews = SUM(view_uk_youtubers_2024[total_views])
-VAR sumOfTotalVideos = SUM(view_uk_youtubers_2024[total_videos])
-VAR  avgViewsPerVideo = DIVIDE(sumOfTotalViews,sumOfTotalVideos, BLANK())
-VAR finalAvgViewsPerVideo = DIVIDE(avgViewsPerVideo, 1000000, BLANK())
+Avg Views per Video (M) = 
+VAR sumOfTotalViews = SUM(view_updated_canada[total_views])
+VAR sumOfTotalVideos = SUM(view_updated_canada[total_videos])
+VAR avgViewsPErVideo = DIVIDE(sumOfTotalViews, sumOfTotalVideos, BLANK())
+VAR finalAvgViewsPErVideo = DIVIDE(avgViewsPErVideo, 1000000, BLANK())
 
-RETURN finalAvgViewsPerVideo 
+RETURN finalAvgViewsPErVideo
 
 ```
 
@@ -418,23 +420,23 @@ RETURN finalAvgViewsPerVideo
 ### 5. Subscriber Engagement Rate
 ```sql
 Subscriber Engagement Rate = 
-VAR sumOfTotalSubscribers = SUM(view_uk_youtubers_2024[total_subscribers])
-VAR sumOfTotalVideos = SUM(view_uk_youtubers_2024[total_videos])
+VAR sumOfTotalSubscribers = SUM(view_updated_canada[total_subscribers])
+VAR sumOfTotalVideos = SUM(view_updated_canada[total_videos])
 VAR subscriberEngRate = DIVIDE(sumOfTotalSubscribers, sumOfTotalVideos, BLANK())
 
-RETURN subscriberEngRate 
+RETURN subscriberEngRate
 
 ```
 
 
 ### 6. Views per subscriber
 ```sql
-Views Per Subscriber = 
-VAR sumOfTotalViews = SUM(view_uk_youtubers_2024[total_views])
-VAR sumOfTotalSubscribers = SUM(view_uk_youtubers_2024[total_subscribers])
+Views per Subscriber = 
+VAR sumOfTotalViews = SUM(view_updated_canada[total_views])
+VAR sumOfTotalSubscribers = SUM(view_updated_canada[total_subscribers])
 VAR viewsPerSubscriber = DIVIDE(sumOfTotalViews, sumOfTotalSubscribers, BLANK())
 
-RETURN viewsPerSubscriber 
+RETURN viewsPerSubscriber
 
 ```
 
