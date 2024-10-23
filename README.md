@@ -356,7 +356,7 @@ HAVING
 	COUNT(*) > 1;
 ```
 ### Output
-![Duplicate count check](assets/images/4_duplicate_records_check.png)
+![Duplicate count check](assets/images/Screenshot (780).png.png)
 
 # Visualization 
 
@@ -365,7 +365,7 @@ HAVING
 
 - What does the dashboard look like?
 
-![GIF of Power BI Dashboard](assets/images/Screenshot(775).png)
+![GIF of Power BI Dashboard](assets/images/Screenshot (775).png)
 
 This shows the Top Canadian Youtubers in 2024 so far. 
 
@@ -620,4 +620,4 @@ ORDER BY
 ```
 #### Output
 
-![Most subsc](assets/images/Screenshot(777).png)
+![Most subsc](assets/images/Screenshot (777).png)
