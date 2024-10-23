@@ -365,7 +365,7 @@ HAVING
 
 - What does the dashboard look like?
 
-![GIF of Power BI Dashboard](assets/images/top_uk_youtubers_2024.gif)
+![GIF of Power BI Dashboard](assets/images/Screenshot(775).png)
 
 This shows the Top Canadian Youtubers in 2024 so far. 
 
@@ -618,4 +618,6 @@ FROM
 ORDER BY
     net_profit DESC;
 ```
+#### Output
 
+![Most subsc](assets/images/Screenshot(777).png)
