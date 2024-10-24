@@ -710,7 +710,7 @@ ORDER BY
 
 #### Output
 
-![Most videos](assets/images/youtubers_with_the_most_videos.png)
+![Most videos](assets/images/Screenshot783.png)
 
 ### 3.  Youtubers with the most views 
 
@@ -804,4 +804,4 @@ ORDER BY
 
 #### Output
 
-![Most views](assets/images/youtubers_with_the_most_views.png)
+![Most views](assets/images/Screenshot784.png)
