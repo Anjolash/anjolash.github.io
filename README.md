@@ -805,3 +805,114 @@ ORDER BY
 #### Output
 
 ![Most views](assets/images/Screenshot784.png)
+
+## Discovery
+
+### Key Findings:
+1. **Top Channels by Subscribers**:
+   - **Justin Bieber**: 73.20 million
+   - **Super Simple Songs - Kids Songs**: 42.20 million
+   - **The Weeknd**: 35.50 million
+
+2. **Top Channels by Video Uploads**:
+   - **Global News**: 41,059 videos
+   - **WatchMojo.com**: 27,558 videos
+   - **Step News Agency**: 12,537 videos
+
+3. **Top Channels by Views**:
+   - **Super Simple Songs - Kids Songs**: 51.73 billion views
+   - **Justin Bieber**: 32.63 billion views
+   - **The Weeknd**: 27.99 billion views
+
+4. **Channels with the Highest Average Views per Video**:
+   - **Mark Ronson**: 32.27 million views per video
+   - **Jessie J**: 5.97 million views per video
+   - **Dua Lipa**: 5.76 million views per video
+
+5. **Top Channels by Views per Subscriber**:
+   - **Super Simple Songs - Kids Songs**: 1,225.80 views/subscriber
+   - **SpyCakes**: 968.99 views/subscriber
+   - **Super Simple ABCs**: 950.31 views/subscriber
+
+6. **Top Channels by Subscriber Engagement Rate**:
+   - **Justin Bieber**: 294,377.51 engagements per video
+   - **Two Super Sisters 2**: 256,000 engagements per video
+   - **The Weeknd**: 201,704.55 engagements per video
+
+## Recommendations
+
+### Based on the insights gathered, we recommend the following channels for collaboration:
+
+1. **Justin Bieber**: 
+   - Best for maximizing reach and visibility due to his massive subscriber base and high engagement rate.
+   
+2. **Super Simple Songs - Kids Songs**:
+   - Ideal for product placement campaigns, with a highly engaged audience and a very high views-to-subscriber ratio.
+   
+3. **The Weeknd**:
+   - Great for both product placement and influencer marketing campaigns, given his large number of views and strong engagement metrics.
+
+4. **WatchMojo.com**:
+   - Consider for a sponsored video series, especially given the high number of uploads and consistent viewership.
+
+## Potential ROI
+
+### 1. **Justin Bieber** - Product Placement Campaign
+   - **Average views per video**: 131.06 million
+   - **Product cost**: $5
+   - **Potential units sold per video**: 2,621,200
+   - **Revenue per video**: $13,106,000
+   - **Campaign cost**: $50,000
+   - **Net profit**: $13,056,000
+
+### 2. **Super Simple Songs - Kids Songs** - Product Placement Campaign
+   - **Average views per video**: 64.66 million
+   - **Product cost**: $5
+   - **Potential units sold per video**: 1,293,200
+   - **Revenue per video**: $6,466,000
+   - **Campaign cost**: $50,000
+   - **Net profit**: $6,416,000
+
+### 3. **The Weeknd** - Influencer Marketing Campaign
+   - **Average views per video**: 159.03 million
+   - **Product cost**: $5
+   - **Potential units sold per video**: 3,180,600
+   - **Revenue per video**: $15,903,000
+   - **Campaign cost**: $50,000
+   - **Net profit**: $15,853,000
+
+### 4. **WatchMojo.com** - Sponsored Video Series
+   - **Average views per video**: 620,000
+   - **Product cost**: $5
+   - **Potential units sold per video**: 12,400
+   - **Revenue per video**: $62,000
+   - **Campaign cost (11-video series)**: $55,000
+   - **Net profit**: $7,000
+
+## Action Plan
+
+### 1. **Reach Out to Top Channels**:
+   Begin discussions with the marketing teams of the recommended YouTubers, prioritizing **Justin Bieber**, **Super Simple Songs - Kids Songs**, and **The Weeknd** for product placement or influencer marketing campaigns.
+
+### 2. **Negotiate Contracts**:
+   Ensure that contracts align with the allocated budget and include terms for tracking performance metrics such as engagement, reach, and conversion rates.
+
+### 3. **Launch Campaigns**:
+   Initiate the campaigns and monitor their progress closely against key performance indicators (KPIs), such as views, conversion rates, and ROI.
+
+### 4. **Review and Optimize**:
+   Collect data from the campaigns, analyze their success, and gather feedback from both customers and the target audience. Use this data to optimize future campaigns with the same or additional YouTubers.
+
+## Conclusion
+
+By focusing on YouTubers with high subscriber counts, views, and engagement, we can maximize the visibility and profitability of our marketing campaigns. **Justin Bieber**, **Super Simple Songs - Kids Songs**, and **The Weeknd** offer the highest potential ROI, while **WatchMojo.com** presents a strong option for a lower-cost, high-volume video series.
+
+
+
+
+
+
+
+
+
+
