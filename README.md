@@ -289,7 +289,7 @@ FROM view_updated_canada;
 
 ```
 
-![Row count check](assets/images/1_row_count_check.png)
+![Row count check](assets/images/Screenshot777.png)
 
 
 
@@ -310,7 +310,7 @@ WHERE
 	TABLE_NAME = 'view_updated_canada';
 ```
 ### Output 
-![Column count check](assets/images/2_column_count_check.png)
+![Column count check](assets/images/Screenshot778.png)
 
 
 
@@ -332,7 +332,7 @@ WHERE
 	TABLE_NAME = 'view_updated_canada'
 ```
 ### Output
-![Data type check](assets/images/3_data_type_check.png)
+![Data type check](assets/images/Screenshot779.png)
 
 
 ## Duplicate count check
