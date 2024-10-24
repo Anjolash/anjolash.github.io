@@ -620,7 +620,7 @@ ORDER BY
 ```
 #### Output
 
-![Most subsc](assets/images/Screenshot (782).png)
+![Most subsc](assets/images/Screenshot782.png)
 
 ### 2. Youtubers with the most videos uploaded
 
