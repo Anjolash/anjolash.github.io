@@ -255,7 +255,7 @@ FROM
 /*
 # 1. Create a view to store the transformed data
 # 2. Cast the extracted channel name as VARCHAR(100)
-# 3. Select the required columns from the top_uk_youtubers_2024 SQL table 
+# 3. Select the required columns from the updated_canada SQL table 
 */
 
 CREATE VIEW view_updated_canada AS
